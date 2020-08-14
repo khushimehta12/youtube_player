@@ -19,18 +19,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-  String videoURL = "https://www.youtube.com/channel/UCOUJ-VCLgb70TVn1R4T4QWQ.";
-
+  String videoURL = "https://www.youtube.com/watch?v=dLbqmoZu9J8";
   YoutubePlayerController _controller;
 
   @override
   void initState() {
-
     _controller = YoutubePlayerController(
         initialVideoId: YoutubePlayer.convertUrlToId(videoURL)
     );
-
     super.initState();
   }
 
@@ -45,12 +41,10 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-
               YoutubePlayer(
                 controller: _controller,
                 showVideoProgressIndicator: true,
               ),
-
             ],
           ),
         ),
